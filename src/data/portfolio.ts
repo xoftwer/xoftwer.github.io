@@ -72,7 +72,6 @@ export const projects: Project[] = [
     ],
     imageUrl: tooleaseImage,
     githubUrl: "https://github.com/xoftwer/toolease",
-    demoUrl: "https://xoftwer.com",
     featured: true,
     createdAt: new Date("2025-09-30"),
   },
