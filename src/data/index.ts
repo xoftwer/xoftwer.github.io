@@ -1,0 +1,1 @@
+export { personalInfo, skills, projects, experiences } from './portfolio';

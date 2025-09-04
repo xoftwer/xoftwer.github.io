@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+
+@import "tailwindcss";
+
+/* Global smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global font configuration */
+* {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Improved text rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  font-optical-sizing: auto;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Clean Typography Hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lexend", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+h1 {
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+h2 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+h3, h4 {
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+/* Code and monospace elements */
+code, pre, .code {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Consolas, "Liberation Mono", monospace;
+  font-weight: 400;
+  font-variant-ligatures: common-ligatures contextual;
+  font-feature-settings: "liga" 1, "calt" 1;
+}
+
+/* Clean body text */
+p, span, div {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.003em;
+  line-height: 1.6;
+}
+
+/* UI elements */
+button, .btn {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.005em;
+}
+
+/* Navigation elements */
+nav, .nav {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+/* Hero display text */
+.hero-text {
+  font-family: "Lexend", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+/* Subtle text variations */
+.text-readable {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: -0.001em;
+}
+
+@plugin "../hero.ts";
+@source "../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Design System - Color Variables (from colors.png) */
+:root {
+  /* Primary brand colors (extracted from Xoftwer colors.png) */
+  --color-primary: #0ea5e9; /* teal-cyan from left side of X - trust, technology, innovation */
+  --color-primary-light: #38bdf8; /* lighter cyan for hover states */
+
+  /* Secondary / accent colors (extracted from Xoftwer colors.png) */
+  --color-secondary: #22c55e; /* vibrant green from right side of X - growth, success, energy */
+  --color-accent: #16a34a; /* darker green for accents */
+
+  /* Neutral background & surfaces (from colors.png backdrop) */
+  --color-background: #1f1f23; /* sophisticated dark from colors.png - focus, elegance */
+  --color-surface: #27272a; /* slightly lighter surface areas */
+
+  /* Text colors (high contrast for accessibility) */
+  --color-text-primary: #ffffff; /* pure white for maximum readability */
+  --color-text-secondary: #a1a1aa; /* muted gray for supporting content */
+
+  /* Legacy variable names for compatibility */
+  --primary-blue: #0ea5e9;
+  --primary-light: #38bdf8;
+  --secondary-green: #22c55e;
+  --accent-green: #16a34a;
+  --background-dark: #1f1f23;
+  --surface-dark: #27272a;
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+
+  /* Utility / state colors */
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+}
